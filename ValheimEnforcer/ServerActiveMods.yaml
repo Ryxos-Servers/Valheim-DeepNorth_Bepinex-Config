@@ -1,0 +1,220 @@
+#################################################
+# Valheim Enforcer - Active Mods
+#
+# Every plugin this machine loaded, for copying into the lists in Mods.yaml. Each entry is already
+# indented to sit under requiredMods, optionalMods, adminOnlyMods or serverOnlyMods.
+#
+# Reference only: deleted and rewritten every start, and never read. Editing it does nothing.
+#
+# The entries below carry only what is installed. Everything that expresses policy is yours to add
+# once the entry is in Mods.yaml:
+#
+# Fields on a mod entry. Only the ones you want are needed - the rest are written for you, or left
+# out entirely when unused.
+#
+#   pluginID            The BepInEx plugin GUID. The same value as the entry's key. Written for you.
+#   version             The version this list expects. Kept current automatically for mods this
+#                       machine actually loads, so updating a mod needs no edit here.
+#   name                Human readable. Used in logs and in the text a rejected player is shown.
+#   enforceVersion      Require an exact version match. Default false, so a client a patch version
+#                       behind is not locked out of a server that never asked for exact versions.
+#   keepWhenUnloaded    Never drop this entry just because this machine does not load the mod.
+#                       Default false. Only requiredMods is ever pruned, and only when
+#                       RemoveUnloadedModsFromRequired is on - this is the per-mod opt out, for a
+#                       mod you require of clients but do not run on the server yourself.
+#
+# File verification. Catches a mod somebody recompiled with different numbers in it while leaving
+# the version string alone. All optional; an entry using none of these is checked by name and
+# version only.
+#
+#   acceptedHashes      List of SHA256 hashes this mod's DLL may have. Matching any one passes, so
+#                       several builds can be allowed at once. Case insensitive.
+#   hashSource          Where acceptedHashes came from: Local, Manual or Thunderstore.
+#                       Only Local entries are refreshed at startup, which is what lets a hash you
+#                       pinned by hand survive a restart instead of being overwritten by whatever
+#                       this machine happens to have on disk. Set it to Manual to protect yours.
+#   hashedFrom          Bookkeeping for the above: 'local:<version>', or 'Owner-Name-Version' for a
+#                       resolved package. Re-resolution happens only when this stops matching.
+#   thunderstorePackage 'Owner-ModName' or 'Owner-ModName-Version' - the same dependency string a
+#                       Thunderstore manifest uses. The server downloads that package and records
+#                       its hashes. Needs ResolveThunderstoreHashes, which is off by default. This
+#                       is the only way this mod reaches the network; download URLs are not
+#                       supported on purpose.
+#   hashEnforcement     Per-mod override of the server's HashEnforcement setting: Off, WhenKnown
+#                       or Strict.
+#
+# Two more fields turn up in these files but are NOT policy and setting them achieves nothing:
+# 'hash' and 'hashStatus' are what a client reports about its own copy of a mod.
+#
+# A patcher entry carries only 'name' and 'acceptedHashes'. A patcher has no GUID and no version, so
+# its file is the only thing that identifies it.
+#
+# An empty list is written as a bare key ('optionalMods:' with nothing under it). Add entries by
+# indenting them beneath it, two spaces in.
+#################################################
+
+activeMods:
+  advize.PlantEverything:
+    pluginID: advize.PlantEverything
+    version: 1.21.3
+    name: PlantEverything
+  Azumatt.AzuAreaRepair:
+    pluginID: Azumatt.AzuAreaRepair
+    version: 1.1.8
+    name: AzuAreaRepair
+  Azumatt.AzuCraftyBoxes:
+    pluginID: Azumatt.AzuCraftyBoxes
+    version: 1.8.28
+    name: AzuCraftyBoxes
+  Azumatt.Foglands:
+    pluginID: Azumatt.Foglands
+    version: 1.0.3
+    name: Foglands
+  Azumatt.Recycle_N_Reclaim:
+    pluginID: Azumatt.Recycle_N_Reclaim
+    version: 1.4.5
+    name: Recycle_N_Reclaim
+  balrond.astafaraios.BalrondTwinStones:
+    pluginID: balrond.astafaraios.BalrondTwinStones
+    version: 1.0.2
+    name: BalrondTwinStones
+  com.Bento.MissingPieces:
+    pluginID: com.Bento.MissingPieces
+    version: 2.3.2
+    name: MissingPieces
+  com.Fire.FiresGhettoNetworkMod:
+    pluginID: com.Fire.FiresGhettoNetworkMod
+    version: 1.5.53
+    name: FiresGhettoNetworkMod
+  com.jotunn.jotunn:
+    pluginID: com.jotunn.jotunn
+    version: 2.30.2
+    name: Jotunn
+  com.marlthon.skipintrovideo:
+    pluginID: com.marlthon.skipintrovideo
+    version: 0.0.1
+    name: Skip Intro Video
+  com.ValheimModding.NewtonsoftJsonDetector:
+    pluginID: com.ValheimModding.NewtonsoftJsonDetector
+    version: 1.0.0
+    name: Newtonsoft.Json Detector
+  com.ValheimModding.YamlDotNetDetector:
+    pluginID: com.ValheimModding.YamlDotNetDetector
+    version: 1.0.0
+    name: YamlDotNet Detector
+  crevitka.cleanmenu:
+    pluginID: crevitka.cleanmenu
+    version: 1.2.0
+    name: Clean Main Menu
+  de.sirskunkalot.ALaCart:
+    pluginID: de.sirskunkalot.ALaCart
+    version: 0.0.5
+    name: ALaCart
+  dev.crystal.digdeeper:
+    pluginID: dev.crystal.digdeeper
+    version: 1.3.1.0
+    name: Dig Deeper
+  digitalroot.mods.GoldBars:
+    pluginID: digitalroot.mods.GoldBars
+    version: 1.2.34
+    name: Digitalroot GoldBars
+  digitalroot.mods.slopecombatassistance:
+    pluginID: digitalroot.mods.slopecombatassistance
+    version: 2.0.30
+    name: Digitalroot's Slope Combat Assistance
+  gravebear.odinsfoodbarrels:
+    pluginID: gravebear.odinsfoodbarrels
+    version: 1.4.0
+    name: OdinsFoodBarrels
+  Harchytek.HudStar:
+    pluginID: Harchytek.HudStar
+    version: 2.4.2
+    name: HudStar
+  MidnightsFX.ValheimCommunityPatch:
+    pluginID: MidnightsFX.ValheimCommunityPatch
+    version: 0.36.0
+    name: ValheimCommunityPatch
+  MidnightsFX.ValheimEnforcer:
+    pluginID: MidnightsFX.ValheimEnforcer
+    version: 0.33.2
+    name: ValheimEnforcer
+  org.bepinex.plugins.blacksmithing:
+    pluginID: org.bepinex.plugins.blacksmithing
+    version: 1.3.6
+    name: Blacksmithing
+  org.bepinex.plugins.sailing:
+    pluginID: org.bepinex.plugins.sailing
+    version: 1.1.12
+    name: Sailing
+  org.tristan.serverrestart:
+    pluginID: org.tristan.serverrestart
+    version: 1.2.1
+    name: Server Restart
+  Raelaziel.OdinArchitect:
+    pluginID: Raelaziel.OdinArchitect
+    version: 1.8.5
+    name: OdinArchitect
+  Raelaziel.OdinBanners:
+    pluginID: Raelaziel.OdinBanners
+    version: 1.1.14
+    name: OdinBanners
+  server_devcommands:
+    pluginID: server_devcommands
+    version: 1.115
+    name: Server Devcommands
+  shudnal.ExtraSlots:
+    pluginID: shudnal.ExtraSlots
+    version: 1.2.19
+    name: Extra Slots
+  shudnal.LongshipUpgrades:
+    pluginID: shudnal.LongshipUpgrades
+    version: 1.0.23
+    name: Longship Upgrades
+  shudnal.NomapPrinter:
+    pluginID: shudnal.NomapPrinter
+    version: 1.5.8
+    name: Nomap Printer
+  Turbero.CinematicBoss:
+    pluginID: Turbero.CinematicBoss
+    version: 1.2.2
+    name: Cinematic Boss
+  Turbero.CraftMeOnce:
+    pluginID: Turbero.CraftMeOnce
+    version: 1.0.6
+    name: Craft Me Once
+  Turbero.DetailedLevels:
+    pluginID: Turbero.DetailedLevels
+    version: 2.1.4
+    name: Detailed Levels
+  Turbero.EconomyInfo:
+    pluginID: Turbero.EconomyInfo
+    version: 1.3.0
+    name: Economy Info
+  ZenDragon.Zen.ModLib:
+    pluginID: ZenDragon.Zen.ModLib
+    version: 1.14.21
+    name: Zen.ModLib
+  ZenDragon.ZenCompass:
+    pluginID: ZenDragon.ZenCompass
+    version: 1.8.0
+    name: ZenCompass
+  ZenDragon.ZenHoverItem:
+    pluginID: ZenDragon.ZenHoverItem
+    version: 1.3.0
+    name: ZenHoverItem
+  ZenDragon.ZenPath:
+    pluginID: ZenDragon.ZenPath
+    version: 1.1.0
+    name: ZenPath
+  ZenDragon.ZenSign:
+    pluginID: ZenDragon.ZenSign
+    version: 1.9.6
+    name: ZenSign
+  ZenDragon.ZenUI:
+    pluginID: ZenDragon.ZenUI
+    version: 1.9.3
+    name: ZenUI
+  _shudnal.ConditionalConfigSync:
+    pluginID: _shudnal.ConditionalConfigSync
+    version: 1.0.10
+    name: Conditional Config Sync

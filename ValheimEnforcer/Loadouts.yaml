@@ -1,0 +1,48 @@
+#################################################
+# Starter loadouts
+#
+# A kit handed to a character joining this server for the FIRST time. Set
+# EnableStarterLoadouts to true and point DefaultStarterLoadout at one of the
+# names below.
+#
+# The kit is granted AFTER the new-character rules have stripped whatever the
+# character arrived carrying, so nothing here needs listing in
+# NewCharacterStartingItems as well.
+#
+# items       prefabName is the name in the game's object database, the same
+#             spelling NewCharacterStartingItems takes. quality is the upgrade
+#             level (1 = unupgraded). equipped is ignored for anything that
+#             cannot be worn or held.
+# skills      only ever RAISES a level, never lowers one.
+# known*      only used when SyncKnownItems is on, which is what gives the
+#             server somewhere to record them. Materials are usually what you
+#             want: the game works most recipes out from the materials and
+#             crafting stations a character knows.
+# spawn       only used when SyncSpawnPoint is on. Leave haveSpawnPoint false
+#             to use the world's own start location.
+#
+# This file is re-read while the server is running.
+#################################################
+loadouts: {}
+
+# Remove the {} above and uncomment this to start from an example:
+#
+#loadouts:
+#  starter:
+#    description: A hood, a cloak and something to eat
+#    items:
+#      - prefabName: HelmetLeather
+#        quality: 1
+#        equipped: true
+#      - prefabName: CapeDeerHide
+#        quality: 1
+#        equipped: true
+#      - prefabName: CookedMeat
+#        stack: 5
+#    skills:
+#      Run: 10
+#      Swim: 10
+#    knownMaterials:
+#      - $item_wood
+#      - $item_stone
+#    haveSpawnPoint: false

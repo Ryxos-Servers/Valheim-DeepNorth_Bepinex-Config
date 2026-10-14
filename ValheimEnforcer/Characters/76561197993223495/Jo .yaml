@@ -1,0 +1,325 @@
+name: "Jo "
+hostID: 76561197993223495
+skillLevels:
+  Run: 31.1152058
+  Swim: 6.328526
+  Jump: 15.0782471
+  Unarmed: 6.757266
+  Swords: 0
+  Axes: 16.7125778
+  Blocking: 1.85737491
+  Farming: 4.610213
+  Clubs: 0
+  WoodCutting: 26.6140289
+  Crafting: 8.72154
+  Sneak: 11.0166254
+  Bows: 2
+  Cooking: 5.50627661
+  Knives: 13.0794287
+  Spears: 0
+  Dodge: 0
+  Pickaxes: 12.00325
+  2143840399: 0
+  1208107160: 0
+playerCustomData:
+  ACB_PreventPulling: 1
+  craft_item $item_axe_stone: 1
+  craft_item $item_hammer: 5
+  craft_item $item_club: 1
+  craft_item $item_arrow_wood: 2
+  craft_item $item_axe_flint: 3
+  craft_item $item_legs_rags: 2
+  craft_item $item_spear_flint: 1
+  craft_item $item_torch: 1
+  craft_item $item_shield_wood: 1
+  craft_item $item_hoe: 4
+  craft_item $item_knife_flint: 1
+  craft_item $item_helmet_leather: 4
+  craft_item $item_axe_early: 1
+  craft_item $item_legs_leather: 1
+  craft_item $item_bow: 1
+  craft_item $item_arrow_flint: 5
+  craft_item $item_arrow_fire: 4
+  craft_item $item_pickaxe_antler: 1
+activeCharacterEffects:
+  BeltStrength:
+    time: 14.1601334
+    nameHash: -460902046
+  SetEffect_TrollArmor:
+    time: 14.1601334
+    nameHash: 248443418
+  Cold:
+    time: 13.880127
+    nameHash: -151837904
+playerItems:
+- prefabName: Cultivator
+  mStack: 1
+  mDurability: 800
+  mQuality: 4
+  mCustomdata: {}
+  mGridpos:
+    x: 2
+    y: 3
+- prefabName: Hoe
+  mStack: 1
+  mDurability: 800
+  mQuality: 4
+  mCustomdata: {}
+  mGridpos:
+    x: 1
+    y: 3
+- prefabName: Hammer
+  mStack: 1
+  mDurability: 299.04
+  mQuality: 3
+  mCrafterID: 190404798
+  mCrafterName: "Jo "
+  mCustomdata: {}
+  mGridpos:
+    x: 1
+- prefabName: PickaxeBronze
+  mStack: 1
+  mDurability: 270
+  mQuality: 4
+  mCrafterID: 190404798
+  mCrafterName: "Jo "
+  mCustomdata: {}
+- prefabName: AxeEarly
+  mStack: 1
+  mDurability: 325
+  mQuality: 4
+  mCustomdata: {}
+  mGridpos:
+    x: 2
+- prefabName: KnifeCopper
+  mStack: 1
+  mDurability: 350
+  mQuality: 4
+  mCrafterID: 190404798
+  mCrafterName: "Jo "
+  mCustomdata: {}
+  mGridpos:
+    x: 3
+- prefabName: ShieldBronzeBuckler
+  mStack: 1
+  mDurability: 300
+  mQuality: 3
+  mCrafterID: 190404798
+  mCrafterName: "Jo "
+  mCustomdata: {}
+  mGridpos:
+    x: 4
+- prefabName: BowFineWood
+  mStack: 1
+  mDurability: 246
+  mQuality: 4
+  mCustomdata: {}
+  mGridpos:
+    x: 5
+- prefabName: Torch
+  mStack: 1
+  mDurability: 15.7969933
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 7
+- prefabName: BoneFragments
+  mStack: 6
+  mDurability: 100
+  mQuality: 1
+  mCrafterID: 190404798
+  mCrafterName: "Jo "
+  mCustomdata: {}
+  mGridpos:
+    x: 1
+    y: 2
+- prefabName: Torch
+  mStack: 1
+  mDurability: 20
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 7
+    y: 1
+- prefabName: TrollHide
+  mStack: 20
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 2
+    y: 2
+- prefabName: BronzeNails
+  mStack: 10
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 5
+    y: 2
+- prefabName: CarrotSoup
+  mStack: 10
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    y: 2
+- prefabName: RoundLog
+  mStack: 16
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 4
+    y: 2
+- prefabName: Stone
+  mStack: 3
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 3
+    y: 3
+- prefabName: Resin
+  mStack: 4
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    y: 3
+- prefabName: Wood
+  mStack: 1
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 4
+    y: 3
+- prefabName: BeltStrength
+  mStack: 1
+  mDurability: 100
+  mQuality: 4
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Utility
+  mEquipped: true
+  mGridpos:
+    x: 4
+    y: 6
+- prefabName: CapeTrollHide
+  mStack: 1
+  mDurability: 650
+  mQuality: 4
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Shoulder
+  mEquipped: true
+  mGridpos:
+    x: 3
+    y: 6
+- prefabName: ArmorTrollLeatherLegs
+  mStack: 1
+  mDurability: 1100
+  mQuality: 4
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Legs
+  mEquipped: true
+  mGridpos:
+    x: 2
+    y: 6
+- prefabName: ArmorTrollLeatherChest
+  mStack: 1
+  mDurability: 1099.53027
+  mQuality: 4
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Chest
+  mEquipped: true
+  mGridpos:
+    x: 1
+    y: 6
+- prefabName: HelmetTrollLeather
+  mStack: 1
+  mDurability: 1100
+  mQuality: 4
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Helmet
+  mEquipped: true
+  mGridpos:
+    y: 6
+- prefabName: QueensJam
+  mStack: 2
+  mDurability: 100
+  mQuality: 1
+  mCrafterID: 584633703
+  mCrafterName: Nwordenjoyer
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Food1
+  mGridpos:
+    x: 3
+    y: 5
+- prefabName: DeerStew
+  mStack: 3
+  mDurability: 100
+  mQuality: 1
+  mCrafterID: 2235446565
+  mCrafterName: Doralingus
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Food2
+  mGridpos:
+    x: 4
+    y: 5
+- prefabName: BoarJerky
+  mStack: 18
+  mDurability: 100
+  mQuality: 1
+  mCrafterID: 3149520227
+  mCrafterName: Imp
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Food3
+  mGridpos:
+    x: 5
+    y: 5
+- prefabName: MeadHealthMinor
+  mStack: 1
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 5
+    y: 3
+- prefabName: ArrowFire
+  mStack: 96
+  mDurability: 100
+  mQuality: 1
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Ammo1
+  mEquipped: true
+  mGridpos:
+    y: 5
+- prefabName: ArrowFire
+  mStack: 99
+  mDurability: 100
+  mQuality: 1
+  mCustomdata:
+    ExtraSlotsEquippedBy: 190404798
+    ExtraSlotsEquippedSlot: Ammo2
+  mGridpos:
+    x: 1
+    y: 5
+- prefabName: MeadStaminaMinor
+  mStack: 5
+  mDurability: 100
+  mQuality: 1
+  mCustomdata: {}
+  mGridpos:
+    x: 6
+    y: 3
+confiscatedItems: []
+saveSequence: 3

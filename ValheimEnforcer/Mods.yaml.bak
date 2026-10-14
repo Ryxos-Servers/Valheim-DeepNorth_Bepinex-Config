@@ -1,0 +1,402 @@
+#################################################
+# Valheim Enforcer - Mod List
+#
+# Regenerated on startup, and re-read within ConfigPollIntervalSeconds of being edited.
+# Comments are kept: a note on its own line stays with the entry below it. A comment sharing
+# a line with a value is not kept, because that line gets rewritten.
+#
+# Every entry is keyed by its BepInEx plugin GUID.
+#
+# ServerActiveMods.yaml, beside this file, lists every plugin this machine loaded. Copy entries from it into:
+#   requiredMods    Clients must have these. Mods the server loads land here by themselves.
+#   optionalMods    Clients may have these, and may connect without them.
+#   adminOnlyMods   Admins may have these, and may connect without them. Anyone else is rejected.
+#                   Wins over requiredMods, so a mod on both is required of nobody.
+#   serverOnlyMods  Server side only. Not demanded of clients - but a client that installs one
+#                   is rejected for it, so this is not the list for client-side mods.
+#
+# The two patcher lists are keyed by file path instead, relative to BepInEx/patchers. Patchers are
+# not plugins and carry no GUID or version, so the file hash is all there is to hold them to.
+#
+#   activePatchers  What this machine has in BepInEx/patchers. Rebuilt every start - editing it does nothing.
+#   allowedPatchers Patchers a client may carry. An allowlist: a client with none always passes.
+#                   The server's own are added here automatically. Needs Mods.ValidatePatchers to enforce.
+#
+# Fields on a mod entry. Only the ones you want are needed - the rest are written for you, or left
+# out entirely when unused.
+#
+#   pluginID            The BepInEx plugin GUID. The same value as the entry's key. Written for you.
+#   version             The version this list expects. Kept current automatically for mods this
+#                       machine actually loads, so updating a mod needs no edit here.
+#   name                Human readable. Used in logs and in the text a rejected player is shown.
+#   enforceVersion      Require an exact version match. Default false, so a client a patch version
+#                       behind is not locked out of a server that never asked for exact versions.
+#   keepWhenUnloaded    Never drop this entry just because this machine does not load the mod.
+#                       Default false. Only requiredMods is ever pruned, and only when
+#                       RemoveUnloadedModsFromRequired is on - this is the per-mod opt out, for a
+#                       mod you require of clients but do not run on the server yourself.
+#
+# File verification. Catches a mod somebody recompiled with different numbers in it while leaving
+# the version string alone. All optional; an entry using none of these is checked by name and
+# version only.
+#
+#   acceptedHashes      List of SHA256 hashes this mod's DLL may have. Matching any one passes, so
+#                       several builds can be allowed at once. Case insensitive.
+#   hashSource          Where acceptedHashes came from: Local, Manual or Thunderstore.
+#                       Only Local entries are refreshed at startup, which is what lets a hash you
+#                       pinned by hand survive a restart instead of being overwritten by whatever
+#                       this machine happens to have on disk. Set it to Manual to protect yours.
+#   hashedFrom          Bookkeeping for the above: 'local:<version>', or 'Owner-Name-Version' for a
+#                       resolved package. Re-resolution happens only when this stops matching.
+#   thunderstorePackage 'Owner-ModName' or 'Owner-ModName-Version' - the same dependency string a
+#                       Thunderstore manifest uses. The server downloads that package and records
+#                       its hashes. Needs ResolveThunderstoreHashes, which is off by default. This
+#                       is the only way this mod reaches the network; download URLs are not
+#                       supported on purpose.
+#   hashEnforcement     Per-mod override of the server's HashEnforcement setting: Off, WhenKnown
+#                       or Strict.
+#
+# Two more fields turn up in these files but are NOT policy and setting them achieves nothing:
+# 'hash' and 'hashStatus' are what a client reports about its own copy of a mod.
+#
+# A patcher entry carries only 'name' and 'acceptedHashes'. A patcher has no GUID and no version, so
+# its file is the only thing that identifies it.
+#
+# An empty list is written as a bare key ('optionalMods:' with nothing under it). Add entries by
+# indenting them beneath it, two spaces in.
+#################################################
+
+requiredMods:
+  _shudnal.ConditionalConfigSync:
+    pluginID: _shudnal.ConditionalConfigSync
+    version: 1.0.10
+    name: Conditional Config Sync
+    acceptedHashes:
+    - a9508884c9a2dc6e1cf1a4d0c64f996d54a738c17d42f0bce612d4a4efbaf2d5
+    hashSource: Local
+    hashedFrom: local:1.0.10
+  advize.PlantEverything:
+    pluginID: advize.PlantEverything
+    version: 1.21.3
+    name: PlantEverything
+    acceptedHashes:
+    - 313d57d5d9df2a27bff04ab184487d544a0749bbbe2c10cb1c41a0ae964cac62
+    hashSource: Local
+    hashedFrom: local:1.21.3
+  Azumatt.AzuAreaRepair:
+    pluginID: Azumatt.AzuAreaRepair
+    version: 1.1.8
+    name: AzuAreaRepair
+    acceptedHashes:
+    - 792bf8fc2252868cf622fa514ff3659e2f542c2753f720e5749b5cad74b609cc
+    hashSource: Local
+    hashedFrom: local:1.1.8
+  Azumatt.AzuCraftyBoxes:
+    pluginID: Azumatt.AzuCraftyBoxes
+    version: 1.8.28
+    name: AzuCraftyBoxes
+    acceptedHashes:
+    - 381883fe4625d1dd119bb425a2f3c7522457fbc08ae1db60159f8256de940d6e
+    hashSource: Local
+    hashedFrom: local:1.8.28
+  Azumatt.Foglands:
+    pluginID: Azumatt.Foglands
+    version: 1.0.3
+    name: Foglands
+    acceptedHashes:
+    - b643424fa082869ee6e87b3e40ff2b32c5e34aa35ae090a42776d00055952fe6
+    hashSource: Local
+    hashedFrom: local:1.0.3
+  Azumatt.Recycle_N_Reclaim:
+    pluginID: Azumatt.Recycle_N_Reclaim
+    version: 1.4.5
+    name: Recycle_N_Reclaim
+    acceptedHashes:
+    - 362e0a417c28cf4ac1afe6db8a6fe35ea8daf7ff6dc5b71690b06b177c9d21fc
+    hashSource: Local
+    hashedFrom: local:1.4.5
+  balrond.astafaraios.BalrondTwinStones:
+    pluginID: balrond.astafaraios.BalrondTwinStones
+    version: 1.0.2
+    name: BalrondTwinStones
+    acceptedHashes:
+    - 974e2623cf23bc35fcb7b5054bbba353aef52da4a85f7776bac43ccdabc469bf
+    hashSource: Local
+    hashedFrom: local:1.0.2
+  com.jotunn.jotunn:
+    pluginID: com.jotunn.jotunn
+    version: 2.30.2
+    name: Jotunn
+    acceptedHashes:
+    - 9509221046842a70f94b98bab4cb41005dee026823a7a79345829ed46a30f796
+    hashSource: Local
+    hashedFrom: local:2.30.2
+  com.Bento.MissingPieces:
+    pluginID: com.Bento.MissingPieces
+    version: 2.3.2
+    name: MissingPieces
+    acceptedHashes:
+    - e746550afc841b5b4183fa5a1df399ab0f7b6e8440e8a389bfc224bddfd667b3
+    hashSource: Local
+    hashedFrom: local:2.3.2
+  MidnightsFX.ValheimCommunityPatch:
+    pluginID: MidnightsFX.ValheimCommunityPatch
+    version: 0.36.0
+    name: ValheimCommunityPatch
+    acceptedHashes:
+    - 9f4895e4f75ecc889ec0e46fecf832bf1e39fb69460e8ff8d4bd2852a60de7cb
+    hashSource: Local
+    hashedFrom: local:0.36.0
+  com.Fire.FiresGhettoNetworkMod:
+    pluginID: com.Fire.FiresGhettoNetworkMod
+    version: 1.5.53
+    name: FiresGhettoNetworkMod
+    acceptedHashes:
+    - 41b18bf36f837620dc5a76de3bee0569555b699aaa10722b8d95c07a70a638b2
+    hashSource: Local
+    hashedFrom: local:1.5.53
+  com.marlthon.skipintrovideo:
+    pluginID: com.marlthon.skipintrovideo
+    version: 0.0.1
+    name: Skip Intro Video
+    acceptedHashes:
+    - 9a613be52279ab2cb613beec8799147b3edcbcce11210a238f4ab60446c460dd
+    hashSource: Local
+    hashedFrom: local:0.0.1
+  com.ValheimModding.NewtonsoftJsonDetector:
+    pluginID: com.ValheimModding.NewtonsoftJsonDetector
+    version: 1.0.0
+    name: Newtonsoft.Json Detector
+    acceptedHashes:
+    - 513f2b88dfea6b96336a63d4120cdfc05011391ab45d981989e88844722d84b7
+    hashSource: Local
+    hashedFrom: local:1.0.0
+  com.ValheimModding.YamlDotNetDetector:
+    pluginID: com.ValheimModding.YamlDotNetDetector
+    version: 1.0.0
+    name: YamlDotNet Detector
+    acceptedHashes:
+    - db5a75085f60d69a05979af303d6b0f1db15b1d5d84c77f606d876547ef1f482
+    hashSource: Local
+    hashedFrom: local:1.0.0
+  crevitka.cleanmenu:
+    pluginID: crevitka.cleanmenu
+    version: 1.2.0
+    name: Clean Main Menu
+    acceptedHashes:
+    - 2dd7b17582f051933c5a1362bfc27e1b844516376651bc47a2aad56aa55daad0
+    hashSource: Local
+    hashedFrom: local:1.2.0
+  de.sirskunkalot.ALaCart:
+    pluginID: de.sirskunkalot.ALaCart
+    version: 0.0.5
+    name: ALaCart
+    acceptedHashes:
+    - 5f8c1cdcd382b4d098b0258cd5bc639a6a1d20c14108268d4b52e737701c02ce
+    hashSource: Local
+    hashedFrom: local:0.0.5
+  dev.crystal.digdeeper:
+    pluginID: dev.crystal.digdeeper
+    version: 1.3.1.0
+    name: Dig Deeper
+    acceptedHashes:
+    - 01fefd1e9c944a52cac71ef41618f59bbf6f2dee8f17aa45b08c25f05af62021
+    hashSource: Local
+    hashedFrom: local:1.3.1.0
+  digitalroot.mods.GoldBars:
+    pluginID: digitalroot.mods.GoldBars
+    version: 1.2.34
+    name: Digitalroot GoldBars
+    acceptedHashes:
+    - e9378ff63a0de7ab410430d42fb706c88721b2cb3e85ccb5f0eedee4c5aa88db
+    hashSource: Local
+    hashedFrom: local:1.2.34
+  digitalroot.mods.slopecombatassistance:
+    pluginID: digitalroot.mods.slopecombatassistance
+    version: 2.0.30
+    name: Digitalroot's Slope Combat Assistance
+    acceptedHashes:
+    - 8c3555b4d34e7e6a47c439e552e068a69744757601dca36c71103cc863219ca3
+    hashSource: Local
+    hashedFrom: local:2.0.30
+  gravebear.odinsfoodbarrels:
+    pluginID: gravebear.odinsfoodbarrels
+    version: 1.4.0
+    name: OdinsFoodBarrels
+    acceptedHashes:
+    - fc9cf4574ccd46147afaec3c4240f0d402160fc81209b55ff5f50091fcaeec0b
+    hashSource: Local
+    hashedFrom: local:1.4.0
+  Harchytek.HudStar:
+    pluginID: Harchytek.HudStar
+    version: 2.4.2
+    name: HudStar
+    acceptedHashes:
+    - e0c49edc8bb4fc4c56b9429443906ff052a15230a33e83087df78ce1556c4d45
+    hashSource: Local
+    hashedFrom: local:2.4.2
+  ZenDragon.Zen.ModLib:
+    pluginID: ZenDragon.Zen.ModLib
+    version: 1.14.21
+    name: Zen.ModLib
+    acceptedHashes:
+    - 385b61eabd6204482da8ec2ba4f9e8c72216737e54daf541d76b8307b760d55e
+    hashSource: Local
+    hashedFrom: local:1.14.21
+  ZenDragon.ZenUI:
+    pluginID: ZenDragon.ZenUI
+    version: 1.9.3
+    name: ZenUI
+    acceptedHashes:
+    - e43ed0f1313483ad9533b972180953331859c0cce30d018783ef85ca477b4344
+    hashSource: Local
+    hashedFrom: local:1.9.3
+  shudnal.ExtraSlots:
+    pluginID: shudnal.ExtraSlots
+    version: 1.2.19
+    name: Extra Slots
+    acceptedHashes:
+    - e8aecd2c7f4d354eb1e9bf3f68dd53bc386dc2d5ffa67ec84fb4b52367a5f45b
+    hashSource: Local
+    hashedFrom: local:1.2.19
+  MidnightsFX.ValheimEnforcer:
+    pluginID: MidnightsFX.ValheimEnforcer
+    version: 0.33.2
+    name: ValheimEnforcer
+    acceptedHashes:
+    - 42fea45f2c3c656e59e5b42028f50f086873c1aae5d088ba0e3ddcbe018c2f56
+    hashSource: Local
+    hashedFrom: local:0.33.2
+  org.bepinex.plugins.blacksmithing:
+    pluginID: org.bepinex.plugins.blacksmithing
+    version: 1.3.6
+    name: Blacksmithing
+    acceptedHashes:
+    - 910393d959ae5fda5f41aee05dd750a887ecf058683be2a187fd730d47615b61
+    hashSource: Local
+    hashedFrom: local:1.3.6
+  org.bepinex.plugins.sailing:
+    pluginID: org.bepinex.plugins.sailing
+    version: 1.1.12
+    name: Sailing
+    acceptedHashes:
+    - 4a4cc24d84458ef51826455b74f03d9abc13d3a8259aae8858883ab52e4b00be
+    hashSource: Local
+    hashedFrom: local:1.1.12
+  Raelaziel.OdinArchitect:
+    pluginID: Raelaziel.OdinArchitect
+    version: 1.8.5
+    name: OdinArchitect
+    acceptedHashes:
+    - f1b9846f8260df7f4ff4cf6c5222cb2219ee85240e33376d469d281f1f9c9ace
+    hashSource: Local
+    hashedFrom: local:1.8.5
+  Raelaziel.OdinBanners:
+    pluginID: Raelaziel.OdinBanners
+    version: 1.1.14
+    name: OdinBanners
+    acceptedHashes:
+    - 234e1aa5ea8a89323067c4d6f6d40059256e73f4d6c4bcf461862a108e69cef7
+    hashSource: Local
+    hashedFrom: local:1.1.14
+  server_devcommands:
+    pluginID: server_devcommands
+    version: 1.115
+    name: Server Devcommands
+    acceptedHashes:
+    - f41812ac8c7c759ca60e84beef716c438fb766adda592f8a9365a86514bbda15
+    hashSource: Local
+    hashedFrom: local:1.115
+  shudnal.LongshipUpgrades:
+    pluginID: shudnal.LongshipUpgrades
+    version: 1.0.23
+    name: Longship Upgrades
+    acceptedHashes:
+    - aaf8cb8b8576295f6fd9716514d091a7f03f11030bf054610cc41f78b04b24e8
+    hashSource: Local
+    hashedFrom: local:1.0.23
+  shudnal.NomapPrinter:
+    pluginID: shudnal.NomapPrinter
+    version: 1.5.8
+    name: Nomap Printer
+    acceptedHashes:
+    - b52e93c8ae9129bd4fd17dea08cd7896db7647bf33c823572a00535403b823b6
+    hashSource: Local
+    hashedFrom: local:1.5.8
+  Turbero.CinematicBoss:
+    pluginID: Turbero.CinematicBoss
+    version: 1.2.2
+    name: Cinematic Boss
+    acceptedHashes:
+    - bd44c6cfb7cb7c549e5182defefba38aa44adecc9aafb8bc08392eb4c08368ee
+    hashSource: Local
+    hashedFrom: local:1.2.2
+  Turbero.CraftMeOnce:
+    pluginID: Turbero.CraftMeOnce
+    version: 1.0.6
+    name: Craft Me Once
+    acceptedHashes:
+    - dbfdf5cb9fbb4b7a6332d6339d9cddbc26f1925d5caeac41e0ba5598cc5f534b
+    hashSource: Local
+    hashedFrom: local:1.0.6
+  Turbero.DetailedLevels:
+    pluginID: Turbero.DetailedLevels
+    version: 2.1.4
+    name: Detailed Levels
+    acceptedHashes:
+    - 2f26c4a2d0b8a7ac36bd4a546b80144400ef30afab5b43e8207887bb0b958dde
+    hashSource: Local
+    hashedFrom: local:2.1.4
+  Turbero.EconomyInfo:
+    pluginID: Turbero.EconomyInfo
+    version: 1.3.0
+    name: Economy Info
+    acceptedHashes:
+    - c9b1eacfcad890eff3018db7204557bb5ff3b4d5a34b1d786fefd8276b4d2a59
+    hashSource: Local
+    hashedFrom: local:1.3.0
+  ZenDragon.ZenCompass:
+    pluginID: ZenDragon.ZenCompass
+    version: 1.8.0
+    name: ZenCompass
+    acceptedHashes:
+    - 8a595235c12c282e2a56c7f3cb9cd2d6c94ef4c9d8c63186d926c38d97ef1b93
+    hashSource: Local
+    hashedFrom: local:1.8.0
+  ZenDragon.ZenHoverItem:
+    pluginID: ZenDragon.ZenHoverItem
+    version: 1.3.0
+    name: ZenHoverItem
+    acceptedHashes:
+    - e88df328541ae70cc1602a5350fb7cd995dfc6dab7bf87944adba0f66d6d8e2e
+    hashSource: Local
+    hashedFrom: local:1.3.0
+  ZenDragon.ZenPath:
+    pluginID: ZenDragon.ZenPath
+    version: 1.1.0
+    name: ZenPath
+    acceptedHashes:
+    - 29719cd4440f4f74e1f3168111c3f608ce365f7181a7398819a4643d05227f14
+    hashSource: Local
+    hashedFrom: local:1.1.0
+  ZenDragon.ZenSign:
+    pluginID: ZenDragon.ZenSign
+    version: 1.9.6
+    name: ZenSign
+    acceptedHashes:
+    - e80059486e0d4471c9b519ae7d7257a3c69c42e49a6976e6b1f968430dfce344
+    hashSource: Local
+    hashedFrom: local:1.9.6
+optionalMods:
+adminOnlyMods:
+serverOnlyMods:
+  org.tristan.serverrestart:
+    pluginID: org.tristan.serverrestart
+    version: 1.2.1
+    name: Server Restart
+    acceptedHashes:
+    - 3cba2a6e706e40a2a8af9656104f326b7a4c07e746563dc0578f3150fa33ae38
+    hashSource: Local
+    hashedFrom: local:1.2.1
+activePatchers:
+allowedPatchers:

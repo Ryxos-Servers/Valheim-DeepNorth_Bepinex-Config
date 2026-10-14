@@ -1,0 +1,6 @@
+- name: Everyone
+  commands:
+    permissions: no
+- id: 76561197993223495
+  name: 'Jo '
+  character: 190404798
